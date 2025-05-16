@@ -100,18 +100,11 @@ erDiagram
 
 ---
 
-## 🧪 Next Steps
-- Add **unit tests** and **integration tests** using xUnit
-- Implement **authentication and role-based security** in the next phase
-
----
-
 ## 🛠 Tech Stack
 - ASP.NET Core Web API
 - Entity Framework Core
 - SQL Server
 - Postman (for manual testing)
-- xUnit (for automated testing, coming soon)
 
 ---
 
