@@ -12,6 +12,15 @@ public class TaskCollaborationContext(DbContextOptions<TaskCollaborationContext>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Project>().HasOne(u => u.User)
+        .WithMany(p => p.Projects)
+        .HasForeignKey(f => f.UserId)
+        .OnDelete(DeleteBehavior.Cascade);
 
+        // Many-to-many: Project collaborators
+        modelBuilder.Entity<Project>()
+            .HasMany(p => p.Collaborators)
+            .WithMany()
+            .UsingEntity(j => j.ToTable("ProjectCollaborators"));
     }
 }
