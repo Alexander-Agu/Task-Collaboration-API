@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 var connString = builder.Configuration.GetConnectionString("TaskCollab");
-builder.Services.AddSqlServer<TaskCollaborationContext>(connString);
+builder.Services.AddSqlite<TaskCollaborationContext>(connString);
 var app = builder.Build();
 await app.MigrateDbAsync();
 
