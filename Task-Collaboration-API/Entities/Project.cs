@@ -10,8 +10,9 @@ public class Project
     public required DateOnly CreatedDate { get; set; }
 
     // Realtionships
-    public required int UserId { get; set; }
+    public int UserId { get; set; }
     public User? User { get; set; }
 
     public List<User>? Collaborators { get; set; }
+    public List<UserTask>? Tasks { get; set; }
 }

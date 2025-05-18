@@ -13,5 +13,5 @@ public class User
 
     // Relationships
     public List<Project>? Projects { get; set; }
-    public List<Task>? Tasks { get; set; }
+    public List<UserTask>? Tasks { get; set; }
 }
