@@ -11,7 +11,7 @@ using Task_Collaboration_API.Data;
 namespace Task_Collaboration_API.Data.Migrations
 {
     [DbContext(typeof(TaskCollaborationContext))]
-    [Migration("20250518175100_InitialMigrate")]
+    [Migration("20250518175600_InitialMigrate")]
     partial class InitialMigrate
     {
         /// <inheritdoc />
