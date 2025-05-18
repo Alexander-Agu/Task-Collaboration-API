@@ -4,6 +4,5 @@ namespace Task_Collaboration_API.Dtos.Project;
 
 public record class CreateProject(
     [Required][StringLength(15)] string Name,
-    [Required][StringLength(50)] string Description,
-    [Required] DateOnly CreatedDate
+    [Required][StringLength(50)] string Description
 );

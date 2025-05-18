@@ -12,7 +12,7 @@ public static class TaskMapping
         {
             Title = task.Title,
             Content = task.Content,
-            CreatedDate = task.CreatedDate
+            CreatedDate = DateOnly.FromDateTime(DateTime.Now)
         };
     }
 
@@ -23,7 +23,6 @@ public static class TaskMapping
         {
             Title = task.Title,
             Content = task.Content,
-            CreatedDate = task.CreatedDate
         };
     }
 

@@ -7,7 +7,7 @@ public class Project
     public int Id { get; set; }
     public required string Name { get; set; }
     public required string Description { get; set; }
-    public required DateOnly CreatedDate { get; set; }
+    public DateOnly CreatedDate { get; set; }
 
     // Realtionships
     public int UserId { get; set; }

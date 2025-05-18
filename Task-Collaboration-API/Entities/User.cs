@@ -9,7 +9,7 @@ public class User
     public required string Lastname { get; set; }
     public required string Email { get; set; }
     public required string Password { get; set; }
-    public required DateOnly CreatedDate { get; set; }
+    public DateOnly CreatedDate { get; set; }
 
     // Relationships
     public List<Project>? Projects { get; set; }

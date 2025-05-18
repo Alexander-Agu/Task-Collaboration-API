@@ -14,7 +14,7 @@ public static class UserMapping
             Lastname = createUser.Lastname,
             Email = createUser.Email,
             Password = createUser.Password,
-            CreatedDate = createUser.CreatedDate
+            CreatedDate = DateOnly.FromDateTime(DateTime.Now)
         };
     }
 
@@ -27,7 +27,6 @@ public static class UserMapping
             Lastname = updateUser.Lastname,
             Email = updateUser.Email,
             Password = updateUser.Password,
-            CreatedDate = updateUser.CreatedDate
         };
     }
 
@@ -36,7 +35,7 @@ public static class UserMapping
     {
         return new(
             Firstname: user.Firstname,
-            Lastname: user.Firstname,
+            Lastname: user.Lastname,
             CreatedDate: user.CreatedDate
         );
     }

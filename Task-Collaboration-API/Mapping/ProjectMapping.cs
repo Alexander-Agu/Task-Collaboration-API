@@ -12,7 +12,7 @@ public static class ProjectMapping
         {
             Name = project.Name,
             Description = project.Name,
-            CreatedDate = project.CreatedDate
+            CreatedDate = DateOnly.FromDateTime(DateTime.Now)
         };
     }
 
@@ -23,7 +23,6 @@ public static class ProjectMapping
         {
             Name = project.Name,
             Description = project.Name,
-            CreatedDate = project.CreatedDate
         };
     }
 

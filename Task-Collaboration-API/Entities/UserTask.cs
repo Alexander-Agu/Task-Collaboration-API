@@ -7,7 +7,7 @@ public class UserTask
     public int Id { get; set; }
     public required string Title { get; set; }
     public required string Content { get; set; }
-    public required DateOnly CreatedDate { get; set; }
+    public DateOnly CreatedDate { get; set; }
 
     // Relationships
     public int ProjectId { get; set; }
