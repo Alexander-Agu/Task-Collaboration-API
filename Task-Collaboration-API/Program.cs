@@ -13,6 +13,7 @@ var app = builder.Build();
 await app.MigrateDbAsync();
 
 app.MapUserEndpoints();
+app.MapProjectEndpoints();
 
 
 app.Run();
