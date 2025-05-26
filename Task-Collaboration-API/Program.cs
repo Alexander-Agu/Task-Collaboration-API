@@ -14,6 +14,6 @@ await app.MigrateDbAsync();
 
 app.MapUserEndpoints();
 app.MapProjectEndpoints();
-
+app.MapTaskEndpoints();
 
 app.Run();

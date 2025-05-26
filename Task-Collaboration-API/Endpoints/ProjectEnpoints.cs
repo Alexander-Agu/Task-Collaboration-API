@@ -46,6 +46,8 @@ public static class ProjectEnpoints
         // POST - create project using userId
         group.MapPost("/{id}", async (int id, CreateProject newProject, TaskCollaborationContext dbContext) =>
         {
+            // Check if user exits to be able to create a project
+
             // CHecking if project already exists
             bool projectExists = await dbContext.Projects.Where(x => x.Name == newProject.Name).AnyAsync();
             if (projectExists) return Results.Conflict(new { message = "Project already exists" });
@@ -64,6 +66,9 @@ public static class ProjectEnpoints
         // PUT - update project data
         group.MapPut("/{usersId}/{projectsId}", async (int usersId, int projectsId, UpdateProject updateProject, TaskCollaborationContext dbContext) =>
         {
+            // Check if user exits to be able to create a project
+
+
             Project? project = await dbContext.Projects.Where(x => x.Id == projectsId && x.UserId == usersId).FirstOrDefaultAsync();
             if (project is null) return Results.NotFound();
 
